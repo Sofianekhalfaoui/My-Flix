@@ -1,0 +1,10 @@
+{
+  "name": "MY FLIX",
+  "description": "Premium movie streaming experience with real-time updates from TMDB.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": []
+}

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-cairo: "Cairo", sans-serif;
+  --color-bg-dark: #0b0b0b;
+  --color-neon-red: #e50914;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-white font-cairo antialiased selection:bg-neon-red/30;
+  }
+}
+
+@layer components {
+  .logo-main {
+    @apply text-3xl font-black italic tracking-tighter text-neon-red cursor-pointer uppercase select-none;
+    text-shadow: 0 0 10px rgba(229, 9, 20, 0.8), 0 0 20px rgba(229, 9, 20, 0.4), 0 0 40px rgba(229, 9, 20, 0.2);
+    font-family: "Cairo", sans-serif;
+    letter-spacing: -0.05em;
+  }
+
+  .movie-card {
+    @apply relative cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)];
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
